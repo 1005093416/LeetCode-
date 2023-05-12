@@ -1,0 +1,18 @@
+C++中STL用法：vector stack queue map set
+以上元素都可以用 .size()获取长度 本质上与String的.length()一样
+vector： 
+  vector.size()
+  vector.push_back(i);// 在数组末尾添加元素i
+  
+  vector<int> v1(8); // 定义指定长度
+
+  vector<int> v2;
+  v2.resize(8); // 定义不指定数组v1的长度，用resize来指定长度 
+  
+  vector<int> v3(8, 0); //指定长度为8的数组,并且都赋值为0
+  
+  vector<int> v4(8);
+  for(auto it = v4.begin(); it != v4.end(); ++i){  //使用迭代器来遍历数组，在stack queue map set中都可以用迭代器来遍历
+    cout<< *it <<" "<<endl;
+  }
+ 
