@@ -12,7 +12,12 @@ vector：
   vector<int> v3(8, 0); //指定长度为8的数组,并且都赋值为0
   
   vector<int> v4(8);
-  for(auto it = v4.begin(); it != v4.end(); ++i){  //使用迭代器来遍历数组，在stack queue map set中都可以用迭代器来遍历
+  for(auto it = v4.begin(); it != v4.end(); ++it){  //使用迭代器来遍历数组，在stack queue map set中都可以用迭代器来遍历,这里end()指向的是最后一个元素的下一个位置，是空
     cout<< *it <<" "<<endl;
   }
  
+set:
+  set会按照元素大小自动排序
+  set<int> s;
+  s.insert(1); //插入一个新元素1
+  cout<< *(s.begin())<< endl; //输出的时候要按指针取值
