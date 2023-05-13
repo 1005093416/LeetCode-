@@ -1,6 +1,6 @@
 C++中STL用法：vector stack queue map set
 以上元素都可以用 .size()获取长度 本质上与String的.length()一样
-vector： 
+vector: 数组 
   vector.size()
   vector.push_back(i);// 在数组末尾添加元素i
   
@@ -16,8 +16,18 @@ vector：
     cout<< *it <<" "<<endl;
   }
  
-set:
+set: 集合  //set的内部实现为红黑二叉树,内部存储元素自动排序
   set会按照元素大小自动排序
   set<int> s;
   s.insert(1); //插入一个新元素1
   cout<< *(s.begin())<< endl; //输出的时候要按指针取值
+  
+unorder_set:  //unordered_set的内部实现为哈希表,存储的变量没有顺序,在某些题中set超时是因为内部会排序,使用unorder_set会减少时间复杂度.对插入，删除，查找操作的时间复杂度都为O(1)
+
+map: 键值对
+  map<key, value>
+  
+  map<string, int> m;
+  
+
+unorder_map:
