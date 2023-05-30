@@ -20,14 +20,55 @@ set: 集合  //set的内部实现为红黑二叉树,内部存储元素自动排�
   set会按照元素大小自动排序
   set<int> s;
   s.insert(1); //插入一个新元素1
+  s.find(1);//查找元素1
+  *(s.begin());//取值第一个元素
+  s.erase(1);//删除集合中元素1
   cout<< *(s.begin())<< endl; //输出的时候要按指针取值
+  
   
 unorder_set:  //unordered_set的内部实现为哈希表,存储的变量没有顺序,在某些题中set超时是因为内部会排序,使用unorder_set会减少时间复杂度.对插入，删除，查找操作的时间复杂度都为O(1)
 
 map: 键值对
   map<key, value>
-  
   map<string, int> m;
+  m["key"]= value;
+  m.begin()->first; //第一个元素的key值
+  m.begin()->second; //第一个元素的value值
+  
+  m.rebegin()->first; //最后一个元素的key值
+  m.rebegin()->second; //最后一个元素的value值
   
 
 unorder_map:
+
+
+stack： 栈  
+  stack<type> s;
+  s.push(1); //将元素1压入栈
+  s.pop(); //移除栈顶元素
+  s.top(); //访问栈顶元素
+  s.size(); //访问元素个数
+  
+queue: 队列
+    queue<type> q;
+    q.push(i); //将元素i压入队列
+    q.pop(); //移除队首元素
+    q.front(); //访问队首元素
+    q.back(); //访问队尾元素
+    q.size(); //队列的元素个数
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  
+  
+  
+
+
